@@ -181,7 +181,7 @@ st.markdown("""
 
 - Note: `st.set_page_config` must be called before any other Streamlit commands. It sets the page title (shown in browser tab) and layout (wide vs centered).
 
-![alt text](image.png)
+![section 2 output](image.png)
 
 ---
 
@@ -217,7 +217,7 @@ What you should observe:
 - At this stage, data is loaded directly (without caching) so you can later compare rerun behavior.
 - This is your initial table preview before adding filters in Section 4.
 
-![alt text](image-1.png)
+![section 3 output](image-1.png)
 
 ---
 
