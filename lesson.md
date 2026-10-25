@@ -468,6 +468,9 @@ For Transactions by Flat Type:
 2. Sort the results in descending order of transaction counts.
 3. Create a bar chart using Plotly Express and display it.
 
+![alt text](image-10.png)
+
+
 ### **5.2 Monthly trend**
 
 For Monthly Median Resale Price trend, we will create a line chart showing how the median resale price changes over time.
@@ -485,6 +488,8 @@ fig_trend = px.line(trend, x="month", y="resale_price", markers=True)
 st.plotly_chart(fig_trend, width="stretch")
 ```
 
+![alt text](image-11.png)
+
 ### **5.3 Optional: Detailed table + download**
 
 This is an optional section for users who want to inspect more rows and export the filtered results.
@@ -501,6 +506,7 @@ with st.expander("View Filtered Transactions"):
         mime="text/csv",
     )
 ```
+![alt text](image-12.png)
 
 ---
 
