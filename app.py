@@ -3,9 +3,11 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 
+st.set_page_config(page_title="HDB Resale Dashboard", layout="wide")
+
 print(f"🟢 Rerun at: {datetime.now()}")
 
-DATA_PATH = "./data/resale_data.csv"
+DATA_PATH = "./my-streamlit-app/data/resale_data.csv"
 
 # df = pd.read_csv(DATA_PATH)
 # Convert the 'month' column to datetime format because it is read as object/string by default
@@ -22,7 +24,7 @@ df = load_data(DATA_PATH)
 
 # Sets the page configuration
 # You can set the page title and layout here
-st.set_page_config(page_title="HDB Resale Dashboard", layout="wide")
+# moved to line 6 - st.set_page_config(page_title="HDB Resale Dashboard", layout="wide") 
 
 st.title("🏠 Singapore HDB Resale Dashboard")
 # st.caption("Code-along: building a usable dashboard from real resale transactions.")
@@ -99,7 +101,7 @@ if len(date_range) == 2:
 st.header("Filtered Results")
 st.write(
     f"Matching rows: {len(filtered_df):,} | Columns: {len(filtered_df.columns)}")
-st.dataframe(filtered_df, width="stretch")
+st.dataframe(filtered_df, use_container_width=True)
 
 
 # KPI Rows
