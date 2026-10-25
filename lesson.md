@@ -217,7 +217,7 @@ What you should observe:
 - At this stage, data is loaded directly (without caching) so you can later compare rerun behavior.
 - This is your initial table preview before adding filters in Section 4.
 
-![section 3 output](image-1.png)
+![section 3 output](images/image-1.png)
 
 ---
 
@@ -278,7 +278,7 @@ price_range = st.sidebar.slider(
     step=10000,
 )
 ```
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 4. Create date input for month range
 
@@ -320,7 +320,7 @@ date_min = df["month"].min().date()
 date_max = df["month"].max().date()
 date_range = st.sidebar.date_input("Month Range", value=(date_min, date_max))
 ```
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 
 ### **4.2 Apply filters**
@@ -359,7 +359,7 @@ st.write(f"Matching rows: {len(filtered_df):,} | Columns: {len(filtered_df.colum
 st.dataframe(filtered_df.head(20), width="stretch")
 ```
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 ### **4.4 KPI row**
 
@@ -468,7 +468,7 @@ For Transactions by Flat Type:
 2. Sort the results in descending order of transaction counts.
 3. Create a bar chart using Plotly Express and display it.
 
-![alt text](image-10.png)
+![alt text](images/image-10.png)
 
 
 ### **5.2 Monthly trend**
@@ -488,7 +488,7 @@ fig_trend = px.line(trend, x="month", y="resale_price", markers=True)
 st.plotly_chart(fig_trend, width="stretch")
 ```
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 ### **5.3 Optional: Detailed table + download**
 
@@ -506,7 +506,7 @@ with st.expander("View Filtered Transactions"):
         mime="text/csv",
     )
 ```
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 
 ---
 
