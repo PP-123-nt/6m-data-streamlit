@@ -217,7 +217,7 @@ What you should observe:
 - At this stage, data is loaded directly (without caching) so you can later compare rerun behavior.
 - This is your initial table preview before adding filters in Section 4.
 
-![alt text](image-2.png)
+![alt text](image-1.png)
 
 ---
 
