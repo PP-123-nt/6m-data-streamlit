@@ -23,12 +23,21 @@ st.markdown("""
 ## 3.1 Load directly first (no caching yet)
 DATA_PATH = "./my-streamlit-app/data/resale_data.csv"
 
-df = pd.read_csv(DATA_PATH)
+## 6.3 Add caching and compare performance
+@st.cache_data
+def load_data(path):
+    df = pd.read_csv(path)
+    df["month"] = pd.to_datetime(df["month"])
+    return df
+
+df = load_data(DATA_PATH)
+
+## df = pd.read_csv(DATA_PATH)
 # Lesson assumption:
 # this dataset has already gone through EDA and basic cleaning.
 # Here we focus on dashboard building, not data cleaning.
 # We still set the datetime dtype explicitly for reliable filtering and charting.
-df["month"] = pd.to_datetime(df["month"])
+## df["month"] = pd.to_datetime(df["month"])
 
 
 ## 3.2: First data display
@@ -161,3 +170,9 @@ with st.expander("View Filtered Transactions"):
         file_name="filtered_resale_data.csv",
         mime="text/csv",
     )
+
+## Section 6: The Rerun Model in Streamlit ##
+from datetime import datetime
+print(f"🟢 Rerun at: {datetime.now()}")
+
+
