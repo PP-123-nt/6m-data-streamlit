@@ -278,6 +278,7 @@ price_range = st.sidebar.slider(
     step=10000,
 )
 ```
+![alt text](image-7.png)
 
 4. Create date input for month range
 
@@ -319,6 +320,8 @@ date_min = df["month"].min().date()
 date_max = df["month"].max().date()
 date_range = st.sidebar.date_input("Month Range", value=(date_min, date_max))
 ```
+![alt text](image-8.png)
+
 
 ### **4.2 Apply filters**
 
