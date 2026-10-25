@@ -181,7 +181,7 @@ st.markdown("""
 
 - Note: `st.set_page_config` must be called before any other Streamlit commands. It sets the page title (shown in browser tab) and layout (wide vs centered).
 
-![section 2 output](images/image.png.png)
+![section 2 output](images/image.png)
 
 ---
 
