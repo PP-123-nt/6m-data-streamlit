@@ -359,6 +359,8 @@ st.write(f"Matching rows: {len(filtered_df):,} | Columns: {len(filtered_df.colum
 st.dataframe(filtered_df.head(20), width="stretch")
 ```
 
+![alt text](image-9.png)
+
 ### **4.4 KPI row**
 
 The KPI row shows key metrics at a glance. We will use `st.metric` inside `st.columns` to create a row of four metrics: total transactions, average price, median price, and median floor area.
